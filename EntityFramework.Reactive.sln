@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Reactive", "src\EntityFramework.Reactive\EntityFramework.Reactive.csproj", "{D8F437CC-08D8-48EA-A8A8-3AC1DB3EA0DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Reactive", "src\EntityFramework.Reactive\EntityFramework.Reactive.csproj", "{D8F437CC-08D8-48EA-A8A8-3AC1DB3EA0DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6445F4ED-AAD1-4995-A8E0-626CFE73AB99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Reactive.ChangeDetection", "src\EntityFramework.Reactive.ChangeDetection\EntityFramework.Reactive.ChangeDetection.csproj", "{344E5FB8-FD7E-4590-BEAB-2C4F86373D6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmark", "benchmark", "{F88D3D62-60C7-4DB8-AF91-5685430652C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Reactive.ChangeDetection.Benchmarks", "benchmark\EntityFramework.Reactive.ChangeDetection.Benchmarks\EntityFramework.Reactive.ChangeDetection.Benchmarks.csproj", "{DF7AB834-D74C-46C8-B94B-2D96080337A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2FD34DC3-1A1F-4BC7-B6B7-597451080C7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Reactive.ChangeDetection.Tests", "tests\EntityFramework.Reactive.ChangeDetection.Tests\EntityFramework.Reactive.ChangeDetection.Tests.csproj", "{778DC571-A334-4D03-B892-86BB667700A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +27,27 @@ Global
 		{D8F437CC-08D8-48EA-A8A8-3AC1DB3EA0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8F437CC-08D8-48EA-A8A8-3AC1DB3EA0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8F437CC-08D8-48EA-A8A8-3AC1DB3EA0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{344E5FB8-FD7E-4590-BEAB-2C4F86373D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344E5FB8-FD7E-4590-BEAB-2C4F86373D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344E5FB8-FD7E-4590-BEAB-2C4F86373D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344E5FB8-FD7E-4590-BEAB-2C4F86373D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF7AB834-D74C-46C8-B94B-2D96080337A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7AB834-D74C-46C8-B94B-2D96080337A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7AB834-D74C-46C8-B94B-2D96080337A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7AB834-D74C-46C8-B94B-2D96080337A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{778DC571-A334-4D03-B892-86BB667700A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778DC571-A334-4D03-B892-86BB667700A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778DC571-A334-4D03-B892-86BB667700A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778DC571-A334-4D03-B892-86BB667700A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8F437CC-08D8-48EA-A8A8-3AC1DB3EA0DD} = {6445F4ED-AAD1-4995-A8E0-626CFE73AB99}
+		{344E5FB8-FD7E-4590-BEAB-2C4F86373D6F} = {6445F4ED-AAD1-4995-A8E0-626CFE73AB99}
+		{DF7AB834-D74C-46C8-B94B-2D96080337A8} = {F88D3D62-60C7-4DB8-AF91-5685430652C7}
+		{778DC571-A334-4D03-B892-86BB667700A7} = {2FD34DC3-1A1F-4BC7-B6B7-597451080C7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE4E13F6-4F20-4643-AE43-5BE968E87D30}
