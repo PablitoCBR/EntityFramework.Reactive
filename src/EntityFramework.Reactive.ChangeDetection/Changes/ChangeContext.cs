@@ -1,4 +1,5 @@
-﻿using EntityFramework.Reactive.ChangeDetection.Models;
+﻿using EntityFramework.Reactive.ChangeDetection.Changes.Publishing;
+using EntityFramework.Reactive.ChangeDetection.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
@@ -20,13 +21,13 @@ public class ChangeContext
     {
         ChangedEntities = context.ChangeTracker.Entries()
             .Where(entityEntry => entityEntry.State is not EntityState.Detached and not EntityState.Unchanged)
-            .Select(entityEntry => new EntityEntryChangeData(GetChanges(entityEntry)))
+            .Select(entityEntry => new EntityEntryChangeData(entityEntry.Metadata.ClrType, GetChanges(entityEntry)))
             .ToList();
     }
 
-    public void Flush()
+    public ValueTask FlushAsync()
     {
-        _changePublisher.Publish(this);
+        return _changePublisher.Publish(this);
     }
 
     private static IReadOnlyCollection<EntityPropertyChangeData> GetChanges(EntityEntry entityEntry)
